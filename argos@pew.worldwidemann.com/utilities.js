@@ -274,7 +274,7 @@ function readStream(stream, callback) {
     if (line === null) {
       callback(null);
     } else {
-      callback(String(line) + "\n");
+      callback(imports.byteArray.toString(line) + "\n");
       readStream(source, callback);
     }
   });
